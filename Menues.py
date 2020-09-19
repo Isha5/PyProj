@@ -1,4 +1,4 @@
-#create Menu object
+#create Menu class
 class Menu:
   #constructor  
   def __init__(self,name,items,start_time,       end_time):
