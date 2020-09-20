@@ -11,6 +11,13 @@ class Menu:
   def __repr__(self):
     print('{} menu available from {}am to {}pm'. format(self.name, self.start_time, (self.end_time - 12)))
 
+  def calculate_bill(self, purchased_items):
+    sum = 0
+    for i in purchased_items:
+      if(i in self.items):
+        sum += self.items[i]
+    return sum
+
 # new object brunch created from Menu class
 brunch = Menu('brunch', {'pancakes': 7.50,
      'waffles': 9.00, 
@@ -40,3 +47,6 @@ kids = Menu('kids', {
 print(brunch)  
 # ouput
 #   brunch menu available from 11am to 4pm
+
+total_bill = brunch.calculate_bill(['tea', 'espresso'])
+print(total_bill)
