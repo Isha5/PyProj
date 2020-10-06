@@ -84,5 +84,5 @@ origin_json = {
 
 import json
 
-with open('output.json', 'w') as json_file:
+with open('output.json', 'w') as target_json_file:
   json.dump(origin_json, target_json_file)
